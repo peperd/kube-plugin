@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Set the namespace to query (you might need to adjust this based on your requirements)
-NAMESPACE="k3d-demo"
-
 # Use kubectl top to get resource usage statistics for all pods in the specified namespace
 kubectl top pod -n "$NAMESPACE" | tail -n +2 | while read line; do
   # Extract CPU and memory usage from the output

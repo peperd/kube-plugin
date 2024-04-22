@@ -8,5 +8,6 @@ kubectl top pod -n "$NAMESPACE" | tail -n +2 | while read line; do
   MEMORY=$(echo "$line" | awk '{print $3}')
 
   # Output the statistics to the console
-  echo "$0, $NAMESPACE, $NAME, $CPU, $MEMORY"
+  printf "%-30s %-20s %-15s %-15s\n" "NAMESPACE" "NAME" "CPU(cores)" "MEMORY(bytes)"
+  printf "%-30s %-20s %-15s %-15s\n" "$NAMESPACE" "$NAME" "$CPU" "$MEMORY"
 done

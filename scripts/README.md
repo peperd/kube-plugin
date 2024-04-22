@@ -27,6 +27,4 @@ kubeplugin.sh
 ```
 
 ## Result of execution be like
-```
-/usr/local/bin/kubeplugin.sh, k3d-demo, k3d-5b8659d98c-q6gvv, 0m, 0Mi
-```
+![example](example.png)
